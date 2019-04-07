@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, AddMovieDelegate {
+class MoviesTableViewController: UITableViewController, AddMovieDelegate, UISearchBarDelegate {
     var movies = [Movie]()
     
     override func viewDidLoad() {
@@ -76,8 +76,26 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate {
         self.tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let keyword = searchBar.text {
+            movies = movies.filter { $0.title.starts(with: keyword) }
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            movies = loadData()!
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "addMovie", sender: self)
+    }
+    @IBAction func sortButtonTapped(_ sender: Any) {
+        movies.sort(by: { $0.title < $1.title })
+        self.tableView.reloadData()
     }
 }
 

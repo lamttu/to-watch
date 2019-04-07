@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="zvW-hk-UeH">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="geE-r5-hRq" id="cS9-Hg-9oM"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" textLabel="P4r-PG-6vQ" detailTextLabel="yLn-C1-Yt9" style="IBUITableViewCellStyleSubtitle" id="qBe-Tz-yNz">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qBe-Tz-yNz" id="ENE-9J-39e">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -50,6 +58,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Movies to Watch" id="6qC-Bk-DAf">
+                        <barButtonItem key="leftBarButtonItem" title="Sort" id="fD5-dK-rn6">
+                            <connections>
+                                <action selector="sortButtonTapped:" destination="geE-r5-hRq" id="zQl-W4-rmy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xSz-f6-4ML">
                             <connections>
                                 <action selector="addButtonTapped:" destination="geE-r5-hRq" id="F29-Ou-QDC"/>
