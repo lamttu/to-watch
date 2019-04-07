@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD8354232258E0D30074094E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8354222258E0D30074094E /* Movie.swift */; };
+		AD835425225975860074094E /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AD835424225975860074094E /* movies.json */; };
 		ADB714DC225885BF00D3614C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714DB225885BF00D3614C /* AppDelegate.swift */; };
-		ADB714DE225885BF00D3614C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714DD225885BF00D3614C /* ViewController.swift */; };
+		ADB714DE225885BF00D3614C /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */; };
 		ADB714E1225885BF00D3614C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB714DF225885BF00D3614C /* Main.storyboard */; };
 		ADB714E3225885C000D3614C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB714E2225885C000D3614C /* Assets.xcassets */; };
 		ADB714E6225885C000D3614C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB714E4225885C000D3614C /* LaunchScreen.storyboard */; };
+		ADB714F1225890F700D3614C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714F0225890F700D3614C /* DetailViewController.swift */; };
+		ADB714F32258A1FC00D3614C /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD8354222258E0D30074094E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		AD835424225975860074094E /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = SOURCE_ROOT; };
 		ADB714D8225885BF00D3614C /* ToWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB714DB225885BF00D3614C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADB714DD225885BF00D3614C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		ADB714E0225885BF00D3614C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADB714E2225885C000D3614C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB714E5225885C000D3614C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB714E7225885C000D3614C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADB714F0225890F700D3614C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		ADB714DA225885BF00D3614C /* ToWatch */ = {
 			isa = PBXGroup;
 			children = (
+				ADB714ED22588A3C00D3614C /* Model */,
 				ADB714DB225885BF00D3614C /* AppDelegate.swift */,
-				ADB714DD225885BF00D3614C /* ViewController.swift */,
+				ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */,
+				AD835424225975860074094E /* movies.json */,
 				ADB714DF225885BF00D3614C /* Main.storyboard */,
 				ADB714E2225885C000D3614C /* Assets.xcassets */,
 				ADB714E4225885C000D3614C /* LaunchScreen.storyboard */,
 				ADB714E7225885C000D3614C /* Info.plist */,
+				ADB714F0225890F700D3614C /* DetailViewController.swift */,
+				ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */,
 			);
 			path = ToWatch;
+			sourceTree = "<group>";
+		};
+		ADB714ED22588A3C00D3614C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD8354222258E0D30074094E /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +144,7 @@
 			files = (
 				ADB714E6225885C000D3614C /* LaunchScreen.storyboard in Resources */,
 				ADB714E3225885C000D3614C /* Assets.xcassets in Resources */,
+				AD835425225975860074094E /* movies.json in Resources */,
 				ADB714E1225885BF00D3614C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB714DE225885BF00D3614C /* ViewController.swift in Sources */,
+				ADB714DE225885BF00D3614C /* MoviesTableViewController.swift in Sources */,
 				ADB714DC225885BF00D3614C /* AppDelegate.swift in Sources */,
+				AD8354232258E0D30074094E /* Movie.swift in Sources */,
+				ADB714F32258A1FC00D3614C /* AddMovieViewController.swift in Sources */,
+				ADB714F1225890F700D3614C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
