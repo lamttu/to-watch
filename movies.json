@@ -1,0 +1,23 @@
+[
+    {
+        "title" : "Interstellar",
+        "duration" : 120,
+        "year": 2016,
+        "genre": "Sci-fi",
+        "plot": "Intergalatic adventure"
+    },
+    {
+        "title" : "Moon",
+        "duration" : 90,
+        "year": 2005,
+        "genre": "Sci-fi",
+        "plot": "Man gets stuck on the moon and starts seeing things"
+    },
+    {
+        "title" : "Justice League",
+        "duration" : 120,
+        "year": 2016,
+        "genre": "Sci-fi",
+        "plot": "Bad guy becomes superheroes"
+    }
+]
