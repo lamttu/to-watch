@@ -15,7 +15,7 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate, UISear
         super.viewDidLoad()
         movies = loadData() ?? [Movie]()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -31,6 +31,23 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate, UISear
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             detailViewController.movie = movies[indexPath.row]
             navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        do {
+            let fm = FileManager.default
+            let docsurl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let movieUrl = docsurl.appendingPathComponent("movies.json")
+            try fm.removeItem(at: movieUrl)
+            let encodedData = try JSONEncoder().encode(movies)
+            try encodedData.write(to: movieUrl, options: .atomic)
+        } catch {
+            print("Error removing movie")
         }
     }
     
