@@ -110,9 +110,20 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate, UISear
     @IBAction func addButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "addMovie", sender: self)
     }
+    
+    @IBAction func BrowseBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "browseSegue", sender: self)
+    }
+    
     @IBAction func sortButtonTapped(_ sender: Any) {
         movies.sort(by: { $0.title < $1.title })
         self.tableView.reloadData()
     }
+    
+    @IBAction func sortByDateBtnTapped(_ sender: Any) {
+        movies.sort(by: { $0.year < $1.year })
+        self.tableView.reloadData()
+    }
+    
 }
 
