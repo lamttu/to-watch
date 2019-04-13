@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController, AddMovieDelegate {
+class MoviesTableViewController: UITableViewController, AddMovieDelegate, UISearchBarDelegate {
     var movies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         movies = loadData() ?? [Movie]()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -31,6 +31,23 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate {
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             detailViewController.movie = movies[indexPath.row]
             navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        do {
+            let fm = FileManager.default
+            let docsurl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let movieUrl = docsurl.appendingPathComponent("movies.json")
+            try fm.removeItem(at: movieUrl)
+            let encodedData = try JSONEncoder().encode(movies)
+            try encodedData.write(to: movieUrl, options: .atomic)
+        } catch {
+            print("Error removing movie")
         }
     }
     
@@ -76,8 +93,37 @@ class MoviesTableViewController: UITableViewController, AddMovieDelegate {
         self.tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let keyword = searchBar.text {
+            movies = movies.filter { $0.title.starts(with: keyword) }
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            movies = loadData()!
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "addMovie", sender: self)
     }
+    
+    @IBAction func BrowseBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "browseSegue", sender: self)
+    }
+    
+    @IBAction func sortButtonTapped(_ sender: Any) {
+        movies.sort(by: { $0.title < $1.title })
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func sortByDateBtnTapped(_ sender: Any) {
+        movies.sort(by: { $0.year < $1.year })
+        self.tableView.reloadData()
+    }
+    
 }
 

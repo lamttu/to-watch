@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ACBA6C96BF500ABB1226D51 /* Pods_ToWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836016EF5339BA1DDF23C12 /* Pods_ToWatch.framework */; };
+		AD61C17F226025F90012573E /* MovieIMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61C17E226025F90012573E /* MovieIMDB.swift */; };
+		AD61C18122602D4D0012573E /* IMDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61C18022602D4D0012573E /* IMDBResponse.swift */; };
+		AD61C1832260373E0012573E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD61C1822260373E0012573E /* Alamofire.framework */; };
+		AD61C18522604AC50012573E /* IMDBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61C18422604AC50012573E /* IMDBDetailViewController.swift */; };
+		AD61C1872260500E0012573E /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61C1862260500E0012573E /* MovieDetail.swift */; };
 		AD8354232258E0D30074094E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8354222258E0D30074094E /* Movie.swift */; };
 		AD835425225975860074094E /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AD835424225975860074094E /* movies.json */; };
+		ADB2DFB1225F38B20087D0BC /* BrowseIMDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB2DFB0225F38B20087D0BC /* BrowseIMDBViewController.swift */; };
 		ADB714DC225885BF00D3614C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714DB225885BF00D3614C /* AppDelegate.swift */; };
 		ADB714DE225885BF00D3614C /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */; };
 		ADB714E1225885BF00D3614C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB714DF225885BF00D3614C /* Main.storyboard */; };
@@ -19,8 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A3422F3CB6771F34506C09 /* Pods-ToWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToWatch.debug.xcconfig"; path = "Target Support Files/Pods-ToWatch/Pods-ToWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		244EEBA5BDA9678480319305 /* Pods-ToWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToWatch.release.xcconfig"; path = "Target Support Files/Pods-ToWatch/Pods-ToWatch.release.xcconfig"; sourceTree = "<group>"; };
+		3836016EF5339BA1DDF23C12 /* Pods_ToWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD61C17E226025F90012573E /* MovieIMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieIMDB.swift; sourceTree = "<group>"; };
+		AD61C18022602D4D0012573E /* IMDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBResponse.swift; sourceTree = "<group>"; };
+		AD61C1822260373E0012573E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD61C18422604AC50012573E /* IMDBDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBDetailViewController.swift; sourceTree = "<group>"; };
+		AD61C1862260500E0012573E /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		AD8354222258E0D30074094E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AD835424225975860074094E /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = SOURCE_ROOT; };
+		ADB2DFB0225F38B20087D0BC /* BrowseIMDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseIMDBViewController.swift; sourceTree = "<group>"; };
 		ADB714D8225885BF00D3614C /* ToWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB714DB225885BF00D3614C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +53,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD61C1832260373E0012573E /* Alamofire.framework in Frameworks */,
+				4ACBA6C96BF500ABB1226D51 /* Pods_ToWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E143C95835F197BE47B2FAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08A3422F3CB6771F34506C09 /* Pods-ToWatch.debug.xcconfig */,
+				244EEBA5BDA9678480319305 /* Pods-ToWatch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD61C188226196940012573E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */,
+				ADB2DFB0225F38B20087D0BC /* BrowseIMDBViewController.swift */,
+				ADB714F0225890F700D3614C /* DetailViewController.swift */,
+				ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */,
+				AD61C18422604AC50012573E /* IMDBDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		ADB714CF225885BF00D3614C = {
 			isa = PBXGroup;
 			children = (
 				ADB714DA225885BF00D3614C /* ToWatch */,
 				ADB714D9225885BF00D3614C /* Products */,
+				5E143C95835F197BE47B2FAD /* Pods */,
+				DC151E0D30AEDDBB07ECDE38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,16 +103,14 @@
 		ADB714DA225885BF00D3614C /* ToWatch */ = {
 			isa = PBXGroup;
 			children = (
+				AD61C188226196940012573E /* Controllers */,
 				ADB714ED22588A3C00D3614C /* Model */,
 				ADB714DB225885BF00D3614C /* AppDelegate.swift */,
-				ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */,
 				AD835424225975860074094E /* movies.json */,
 				ADB714DF225885BF00D3614C /* Main.storyboard */,
 				ADB714E2225885C000D3614C /* Assets.xcassets */,
 				ADB714E4225885C000D3614C /* LaunchScreen.storyboard */,
 				ADB714E7225885C000D3614C /* Info.plist */,
-				ADB714F0225890F700D3614C /* DetailViewController.swift */,
-				ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */,
 			);
 			path = ToWatch;
 			sourceTree = "<group>";
@@ -80,8 +119,20 @@
 			isa = PBXGroup;
 			children = (
 				AD8354222258E0D30074094E /* Movie.swift */,
+				AD61C17E226025F90012573E /* MovieIMDB.swift */,
+				AD61C18022602D4D0012573E /* IMDBResponse.swift */,
+				AD61C1862260500E0012573E /* MovieDetail.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DC151E0D30AEDDBB07ECDE38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD61C1822260373E0012573E /* Alamofire.framework */,
+				3836016EF5339BA1DDF23C12 /* Pods_ToWatch.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADB714EA225885C000D3614C /* Build configuration list for PBXNativeTarget "ToWatch" */;
 			buildPhases = (
+				BB7EE0F214DD0D285B5724DF /* [CP] Check Pods Manifest.lock */,
 				ADB714D4225885BF00D3614C /* Sources */,
 				ADB714D5225885BF00D3614C /* Frameworks */,
 				ADB714D6225885BF00D3614C /* Resources */,
+				0313E6DB346F2186FABCE39C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,14 +204,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0313E6DB346F2186FABCE39C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToWatch/Pods-ToWatch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToWatch/Pods-ToWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7EE0F214DD0D285B5724DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADB714D4225885BF00D3614C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD61C18122602D4D0012573E /* IMDBResponse.swift in Sources */,
+				AD61C17F226025F90012573E /* MovieIMDB.swift in Sources */,
 				ADB714DE225885BF00D3614C /* MoviesTableViewController.swift in Sources */,
 				ADB714DC225885BF00D3614C /* AppDelegate.swift in Sources */,
+				AD61C18522604AC50012573E /* IMDBDetailViewController.swift in Sources */,
+				ADB2DFB1225F38B20087D0BC /* BrowseIMDBViewController.swift in Sources */,
 				AD8354232258E0D30074094E /* Movie.swift in Sources */,
+				AD61C1872260500E0012573E /* MovieDetail.swift in Sources */,
 				ADB714F32258A1FC00D3614C /* AddMovieViewController.swift in Sources */,
 				ADB714F1225890F700D3614C /* DetailViewController.swift in Sources */,
 			);
@@ -304,6 +409,7 @@
 		};
 		ADB714EB225885C000D3614C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A3422F3CB6771F34506C09 /* Pods-ToWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +428,7 @@
 		};
 		ADB714EC225885C000D3614C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244EEBA5BDA9678480319305 /* Pods-ToWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
