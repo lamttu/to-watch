@@ -70,6 +70,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AD61C188226196940012573E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */,
+				ADB2DFB0225F38B20087D0BC /* BrowseIMDBViewController.swift */,
+				ADB714F0225890F700D3614C /* DetailViewController.swift */,
+				ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */,
+				AD61C18422604AC50012573E /* IMDBDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		ADB714CF225885BF00D3614C = {
 			isa = PBXGroup;
 			children = (
@@ -91,18 +103,14 @@
 		ADB714DA225885BF00D3614C /* ToWatch */ = {
 			isa = PBXGroup;
 			children = (
+				AD61C188226196940012573E /* Controllers */,
 				ADB714ED22588A3C00D3614C /* Model */,
 				ADB714DB225885BF00D3614C /* AppDelegate.swift */,
-				ADB714DD225885BF00D3614C /* MoviesTableViewController.swift */,
-				ADB2DFB0225F38B20087D0BC /* BrowseIMDBViewController.swift */,
 				AD835424225975860074094E /* movies.json */,
 				ADB714DF225885BF00D3614C /* Main.storyboard */,
 				ADB714E2225885C000D3614C /* Assets.xcassets */,
 				ADB714E4225885C000D3614C /* LaunchScreen.storyboard */,
 				ADB714E7225885C000D3614C /* Info.plist */,
-				ADB714F0225890F700D3614C /* DetailViewController.swift */,
-				ADB714F22258A1FC00D3614C /* AddMovieViewController.swift */,
-				AD61C18422604AC50012573E /* IMDBDetailViewController.swift */,
 			);
 			path = ToWatch;
 			sourceTree = "<group>";

@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1823.2" y="133.5832083958021"/>
         </scene>
-        <!--Add Movie View Controller-->
+        <!--Add Movie-->
         <scene sceneID="WmK-RZ-hV5">
             <objects>
-                <viewController id="ecu-AB-ixh" customClass="AddMovieViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Movie" id="ecu-AB-ixh" customClass="AddMovieViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZoO-En-s3O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2883" y="-384"/>
         </scene>
-        <!--BrowseIMDB View Controller-->
+        <!--IMDB-->
         <scene sceneID="ogy-fa-lpm">
             <objects>
-                <tableViewController id="QpR-Gg-fFY" customClass="BrowseIMDBViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="IMDB" id="QpR-Gg-fFY" customClass="BrowseIMDBViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bd7-RX-rPJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,19 +220,19 @@
             </objects>
             <point key="canvasLocation" x="2883" y="327"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Details-->
         <scene sceneID="G6p-wa-WXp">
             <objects>
-                <viewController storyboardIdentifier="IMDBDetail" id="sEd-12-b02" customClass="IMDBDetailViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IMDBDetail" title="Details" id="sEd-12-b02" customClass="IMDBDetailViewController" customModule="ToWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERU-JK-x8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqr-X4-URn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqr-X4-URn">
                                 <rect key="frame" x="67" y="189" width="296" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.12549019607843137" green="0.38823529411764707" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-3c-acj">
